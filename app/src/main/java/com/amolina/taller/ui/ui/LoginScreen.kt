@@ -1,6 +1,5 @@
 package com.amolina.taller.ui.ui
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 @Composable
 fun LoginScreen() {
@@ -74,14 +72,14 @@ fun LoginScreen() {
 
         }
 
-        if(isLoading){
+        if (isLoading) {
             DisplayLoading(true)
         }
 
         if (authenticated.value) {
             Authenticated()
         } else {
-            Retry()
+            Retry(loginResult.value)
         }
     }
 
@@ -101,7 +99,8 @@ fun Authenticated() {
 }
 
 @Composable
-fun Retry() {
-    Text(text = "Please Retry")
+fun Retry(value: String) {
+    //Text(text = "Please Retry")
+    Text(text = value)
 }
 

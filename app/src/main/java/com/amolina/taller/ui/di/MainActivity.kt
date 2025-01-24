@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.amolina.taller.ui.di.ui.theme.TallerTheme
 import com.amolina.taller.ui.ui.LoginScreen
+import com.amolina.taller.ui.ui.ShowWeirdTextFormatScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
