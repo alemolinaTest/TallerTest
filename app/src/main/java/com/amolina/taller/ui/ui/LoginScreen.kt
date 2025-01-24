@@ -100,7 +100,6 @@ fun Authenticated() {
 
 @Composable
 fun Retry(value: String) {
-    //Text(text = "Please Retry")
     Text(text = value)
 }
 
